@@ -1,0 +1,61 @@
+package com.java.training;
+
+import java.util.Scanner;
+
+public class SimpMath {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		double Prin,Rat,Tim;
+		System.out.println("Enter Principal");
+		Prin = sc.nextDouble();
+		System.out.println("Enter RateofInt");
+		Rat = sc.nextDouble();
+		System.out.println("Enter Time");
+		Tim = sc.nextDouble();
+		double SimpInt = Prin*Rat*Tim/100;
+		System.out.println("Simple Intrest: " +SimpInt);
+		
+		//Compound Intrst
+		
+		double Prin,Rat,Time;
+		System.out.println("Enter Principal");
+		Prin = sc.nextDouble();
+		System.out.println("Enter RateofInt");
+		Rat = sc.nextDouble();
+		System.out.println("Enter Time");
+		Time = sc.nextDouble();
+		double Amount = Prin * Math.pow((1+ Rat / 100), Time);
+		double CompoundInterst = Amount - Prin;
+		System.out.println("Compound Interest: " +CompoundInterst);
+		
+		//Avg of 3 num
+		
+		double num1,num2,num3,Avg;
+		System.out.println("Enter num1");
+		num1 = sc.nextDouble();
+		System.out.println("Enter num2");
+		num2 = sc.nextDouble();
+		System.out.println("Enter num");
+		num3 = sc.nextDouble();
+		Avg = (num1 + num2 + num3)/3;
+		System.out.println("Average of numbers: "+Avg);
+		
+		//Celsius to Farenhit
+		
+		double celsius;
+		System.out.println("Enter Celsius value");
+		celsius = sc.nextDouble();
+		double Farenhit = (celsius * 9/5) + 32;
+		System.out.println("Farenhit is: " + Farenhit);
+		
+		//farenhit to celsius
+		double farenhit;
+		System.out.println("Enter celsius value");
+		farenhit = sc.nextDouble();
+		double celsius = (farenhit - 32) * 5/9;
+		System.out.println("celsius is: " + celsius);
+		 
+	}
+
+}
+
