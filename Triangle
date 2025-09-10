@@ -1,0 +1,50 @@
+package com.java.training;
+
+import java.util.Scanner;
+
+public class Triangle {
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		double a,b,c;
+		System.out.println("Enter value a");
+		a=sc.nextDouble();
+		System.out.println("Enter value b");
+		b=sc.nextDouble();
+		System.out.println("Enter value c");
+		c=sc.nextDouble();
+		
+		double semiper = (a+b+c)/2;
+		
+		double HeronsFor = Math.sqrt(semiper*(semiper-a)*(semiper-b)*(semiper-c));
+		System.out.println("Area of Triangle: " + HeronsFor);
+		
+		//Quadratic Equation
+		
+		double a,b,c;
+		System.out.println("Enter value a");
+		a=sc.nextDouble();
+		System.out.println("Enter value b");
+		b=sc.nextDouble();
+		System.out.println("Enter value c");
+		c=sc.nextDouble();
+		
+		double discriminant = (b*b)-(4*a*c);
+		double root1,root2;
+		
+		if(discriminant>=0) {
+			 root1 = (-b + Math.sqrt(discriminant)/ (2*a));
+			 root2 = (-b - Math.sqrt(discriminant)/ (2*a));
+			 System.out.println("Root1 = " + root1);
+			 System.out.println("Root2 = " + root2);
+			 
+		}else {
+			System.out.println("Roots are imaginary");
+		}
+		
+		
+		
+	}
+
+}
+
