@@ -37,6 +37,16 @@ public class Arthmetic {
 		num8 = sc.nextInt();
 		div = num7 / num8;
 		System.out.println("div of two num: " +div);
+
+  Remainder of any two nums:
+        int num1,num2,rem;
+		System.out.println("Enter num1");
+		num1 = sc.nextInt();
+		System.out.println("Enter num2");
+		num2 = sc.nextInt();
+		rem = num1 % num2;
+		System.out.println("Rem of num: " + rem);
+	
 		
 		
 	}
