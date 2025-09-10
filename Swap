@@ -1,0 +1,53 @@
+package com.java.training;
+
+import java.util.Scanner;
+
+public class SwapNum {
+	
+	public static void main(String[] args) {
+		
+		//with temp
+		Scanner sc = new Scanner(System.in);
+		int a,b,temp;
+		System.out.println("Enter value a");
+		a = sc.nextInt();
+		System.out.println("Enter value b");
+		b = sc.nextInt();
+		System.out.println("Enter value temp");
+		temp = sc.nextInt();
+		System.out.println("Before swapping: " + "a= " + a + " " + "b= " +b);
+		temp = a;
+		a=b;
+		b=temp;
+		System.out.println("After swapping: " + "a= " + a + " " + "b= " +b);
+		
+		//without temp
+		
+		int a,b,temp;
+		System.out.println("Enter value a");
+		a = sc.nextInt();
+		System.out.println("Enter value b");
+		b = sc.nextInt();
+		System.out.println("Before swapping: " + "a= " + a + " " + "b= " +b);
+		a=a+b;
+		b=a-b;
+		a=a-b;
+		System.out.println("After swapping: " + "a= " + a + " " + "b= " +b);	
+		
+		//multiplication and division
+		
+		int a,b,temp;
+		System.out.println("Enter value a");
+		a = sc.nextInt();
+		System.out.println("Enter value b");
+		b = sc.nextInt();
+		System.out.println("Before swapping: " + "a= " + a + " " + "b= " +b);
+		a = a*b;
+		b = a/b;
+		a = a/b;
+		System.out.println("After swapping: " + "a= " + a + " " + "b= " +b);
+		
+	}
+
+}
+
