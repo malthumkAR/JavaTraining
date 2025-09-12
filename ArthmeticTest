@@ -1,0 +1,109 @@
+package com.java.training;
+
+import java.util.Scanner;
+
+public class Arthmetic {
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter num1");
+		int num1 = sc.nextInt();
+		System.out.println("Enter num2");
+		int num2 = sc.nextInt();
+	
+      add(num1,num2) ;
+		System.out.println("Sub of two num: " +sum);
+	}
+		
+		public static int add(int num1, int num2) {
+			int sum = num1+num2;
+			System.out.println("Add of two num: " +sum);
+			return sum;
+					 	
+		}
+		
+		
+		int num3, num4;
+		System.out.println("Enter num3");
+		num3 = sc.nextInt();
+		System.out.println("Enter num4");
+		num4 = sc.nextInt();
+		 sub(num3,num4);
+		sc.close();
+				
+	}
+		public static int sub(int num3, int num4) {
+			int substraction = num3-num4;
+			System.out.println("Sub of two num: " +substraction);
+			return substraction;
+			
+		}
+	
+		int num5  , num6 ;
+		System.out.println("Enter num5");
+		num5 = sc.nextInt();
+		System.out.println("Enter num6");
+		num6 = sc.nextInt();
+		 mul(num5, num6);
+		sc.close();
+		
+		
+	}
+	
+	public static int mul(int num5, int num6) {
+		int multiplication = num5 * num6;
+		System.out.println("mul of two num: " +multiplication);
+		return multiplication;
+		
+	}
+		
+		double num7  , num8;
+		System.out.println("Enter num7");
+		num7 = sc.nextInt();
+		System.out.println("Enter num8");
+		num8 = sc.nextInt();
+		 div(num7, num8);
+		
+	}
+	public static double div(double num7, double num8) {
+		double result = num7 / num8;
+		System.out.println("div of two num: " +result);
+		return result;
+	}
+}
+
+//Test cases
+
+package com.java.training;
+
+public class ArthmeticTest {
+
+	public static void main(String[] args) {
+		Arthmetic.add(10,20);
+		Arthmetic.add(10, 0);
+		Arthmetic.add(-30, 20);
+		Arthmetic.add(-40, -20);
+		Arthmetic.add(0, 0);
+		Arthmetic.add(10000, 20000);
+
+		Arthmetic.sub(35, 20);
+		Arthmetic.sub(44, -20);
+		Arthmetic.sub(-25, 0);
+		Arthmetic.sub(-22, -10);
+		Arthmetic.sub(10, 10);
+
+		Arthmetic.mul(24, 12);
+		Arthmetic.mul(0, 0);
+		Arthmetic.mul(-19, 10);
+		Arthmetic.mul(10, 0);
+		Arthmetic.mul(10, 10);
+
+		Arthmetic.div(10, 3);
+		Arthmetic.div(-12, -10);
+		Arthmetic.div(14, -20);
+		Arthmetic.div(100, 100);
+
+	}
+
+}
+
