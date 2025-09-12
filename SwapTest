@@ -1,0 +1,44 @@
+package com.java.training; 
+
+import java.util.Scanner;
+
+public class SwapNumber {
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		swap(sc.nextInt(),sc.nextInt()); 
+			
+		sc.close();
+		
+	
+	}
+	
+	public static void swap(int a, int b) {
+		System.out.println("Before swapping: " + "a= " + a + " " + "b= " +b);
+		a=a+b;
+		b=a-b;
+		a=a-b;
+		System.out.println("After swapping: " + "a= " + a + " " + "b= " +b);
+		
+	}
+
+}
+
+
+// Testcase
+
+package com.java.training;
+
+public class SwapTest {
+
+	public static void main(String[] args) {
+		SwapNumber.swap(10, 20);
+		SwapNumber.swap(10, -20);
+		SwapNumber.swap(-30, -20);
+		SwapNumber.swap(5, 5);
+		SwapNumber.swap(20, 0);
+	}
+
+}
+
