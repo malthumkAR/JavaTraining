@@ -1,0 +1,136 @@
+public class HappyNumber {
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n; 
+		System.out.println("Enter n value");
+		n = sc.nextInt();
+		System.out.println(isHappy(n));
+	}
+		public static boolean isHappy(int n){
+			int count = 0;
+			while(n!=1 && count<20) {
+				n = getNext(n);
+				count++;
+			}
+			return n ==1;
+		}
+		
+		
+
+	
+	public static int getNext(int n) {
+		int sum = 0;
+		while(n>0) {
+			int digit = n%10; //it will give last num
+			sum+= digit * digit; //square it and add it
+			n = n/10; // remove last num
+		}
+		return sum;
+	}
+}
+
+
+//Testcase
+
+package com.java.training;
+
+public class HappyNumberTest {
+
+	public static void main(String[] args) {
+		System.out.println(HappyNumber.isHappy(19));
+		System.out.println(HappyNumber.isHappy(2));
+		System.out.println(HappyNumber.isHappy(0));
+		System.out.println(HappyNumber.isHappy(7));
+		System.out.println(HappyNumber.isHappy(-10));
+	}
+
+}
+
+
+	package com.java.training;
+
+import java.util.Scanner;
+
+public class PalindromeNum {
+
+	public static boolean isPalindrome(int x) {
+		if(x<0) {
+			return false;
+		}
+			int original = x;
+			int reversed = 0;
+			while(x!=0) {
+				int digit = x%10;
+				reversed = reversed * 10 + digit;
+				x = x/10;
+			}
+			return original == reversed;
+		}
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int x;
+		System.out.println("Enter n value");
+		x = sc.nextInt();
+		System.out.println(isPalindrome(x));
+	}
+}
+
+
+//Testcase
+
+package com.java.training;
+
+public class PalindromeTest {
+	public static void main(String[] args) {
+		System.out.println(PalindromeNum.isPalindrome(121));
+		System.out.println(PalindromeNum.isPalindrome(-33));
+		System.out.println(PalindromeNum.isPalindrome(0));
+		System.out.println(PalindromeNum.isPalindrome(456));
+	}
+
+}
+
+
+package com.java.training;
+
+import java.util.Scanner;
+
+public class Climbing {
+
+	public static int climbStairs(int n) {
+
+		if(n<=2) {
+			return n;
+		}
+		return climbStairs(n-1) + (n-2);
+
+	}
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n;
+		System.out.println("Enter n steps");
+		n = sc.nextInt();
+		System.out.println(climbStairs(n));
+
+	}
+	}
+
+
+//Testcase
+
+package com.java.training;
+
+public class ClimbingTest {
+
+	public static void main(String[] args) {
+		System.out.println(Climbing.climbStairs(5));
+		System.out.println(Climbing.climbStairs(-2));
+		System.out.println(Climbing.climbStairs(0));
+
+	}
+
+}
+
