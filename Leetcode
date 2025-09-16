@@ -134,3 +134,104 @@ public class ClimbingTest {
 
 }
 
+
+package com.java.training;
+
+import java.util.Scanner;
+
+public class AddDigits {
+	public static int addDigit(int num) {
+		while(num>=10) {
+		int sum = 0;
+		while(num>0) {
+			sum+=num%10;
+			num/=10;
+
+		}
+		num = sum;
+		}
+		return num;
+	}
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n;
+		System.out.println("enter n value");
+		n = sc.nextInt();
+		System.out.println(addDigit(n));
+	}
+
+}
+
+//Testcase
+
+package com.java.training;
+
+public class AddDigitsTest {
+
+	public static void main(String[] args) {
+		System.out.println(AddDigits.addDigit(38));
+		System.out.println(AddDigits.addDigit(0));
+		System.out.println(AddDigits.addDigit(-34));
+
+	}
+
+}
+
+
+package com.java.training;
+
+import java.util.Scanner;
+
+public class MissingNum {
+
+	public static int missingNum(int[] nums) {
+		int n = nums.length;
+		int expectedSum = n*(n+1)/2;
+		int actualSum = 0;
+
+		for(int num:nums) {
+			actualSum+=num;
+		}
+		return expectedSum-actualSum;
+	}
+
+	public static void main(String[] args) {
+		int n;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter value of n");
+		n = sc.nextInt();
+		int[] nums = new int[n];
+		System.out.println("Enter" + n + "numbers from 0 to 3");
+		for(int i=0; i<n; i++) {
+			nums[i]= sc.nextInt();
+		}
+		int missing = missingNum(nums);
+
+		System.out.println("MissingNum: " + missing);
+	}
+
+
+
+}
+
+package com.java.training;
+
+public class MissingNumTest {
+	
+	public static void main(String[] args) {
+		int[] nums1 = {3,0,1};
+		System.out.println("MissingNumber: " + MissingNum.missingNum(nums1));
+		
+		int[] nums2 = {0,2};
+		System.out.println("MissingNumber: " + MissingNum.missingNum(nums2));
+		
+		int[] nums3 = {0};
+		System.out.println("MissingNumber: " + MissingNum.missingNum(nums3));
+		
+	}
+
+}
+
+//Testcase
+
+
