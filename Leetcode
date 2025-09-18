@@ -235,3 +235,96 @@ public class MissingNumTest {
 //Testcase
 
 
+
+
+package com.java.training;
+
+import java.util.Scanner;
+
+public class NimGame {
+
+	public static boolean canWinGame(int n) {
+		return n%4 != 0;
+	}
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n;
+		System.out.println("Enter n value");
+		n = sc.nextInt();
+		System.out.println(canWinGame(n));
+	}
+
+}
+
+
+//Testcase
+
+package com.java.training;
+
+public class NimGameTest {
+
+	public static void main(String[] args) {
+		System.out.println(NimGame.canWinGame(0));
+		System.out.println(NimGame.canWinGame(4));
+		System.out.println(NimGame.canWinGame(7));
+		System.out.println(NimGame.canWinGame(1));
+
+	}
+
+}
+
+
+package com.java.training;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class FizzBuzz {
+
+	public static List<String> fizzBuzz(int n) {
+		List<String> answer = new ArrayList<>();
+		for(int i=1; i<=n; i++) {
+		if(i%3==0 && i%5==0) {
+			answer.add("FizzBuzz");
+		} else if(i%3==0) {
+			answer.add("Fizz");
+		} else if(i%5==0) {
+			answer.add("Buzz");
+		} else {
+			answer.add(String.valueOf(i));
+		}
+	}
+		return answer;
+	}
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n;
+		System.out.println("Enter n value");
+		n = sc.nextInt();
+		System.out.println(fizzBuzz(n));
+	}
+
+}
+
+
+//Testcase
+
+package com.java.training;
+
+public class FizzBuzzTest {
+
+	public static void main(String[] args) {
+		System.out.println(FizzBuzz.fizzBuzz(3));
+		System.out.println(FizzBuzz.fizzBuzz(5));
+		System.out.println(FizzBuzz.fizzBuzz(0));
+		System.out.println(FizzBuzz.fizzBuzz(15));
+		System.out.println(FizzBuzz.fizzBuzz(-5));
+		System.out.println(FizzBuzz.fizzBuzz(7));
+
+	}
+
+}
+
